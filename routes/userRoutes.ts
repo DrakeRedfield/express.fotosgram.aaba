@@ -38,6 +38,14 @@ userRoutes.post( '/login', (req: Request, res: Response) => {
         }
     });
 });
+//Get User by Token
+userRoutes.get('/', [verifyToken], (req: any, res: Response) => {
+    const user = req.user;
+    res.json({
+        status: true,
+        user
+    })
+});
 userRoutes.post( '/update', verifyToken ,(req:any, res:Response) =>{
     const user = {
         nombre: req.body.nombre || req.user.nombre,

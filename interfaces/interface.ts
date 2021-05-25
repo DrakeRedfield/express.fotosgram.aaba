@@ -15,3 +15,15 @@ export interface IPost extends Document {
     coords: string,
     user: string
 }
+
+export interface IFileUpload{
+    name: string,
+    data: any,
+    encoding: string,
+    size?: number,
+    tempFilePath: string,
+    truncated: boolean,
+    mimetype: string,
+    md5?: string,
+    mv: Function
+}

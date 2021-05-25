@@ -1,16 +1,16 @@
-//node init iniciar una aplicación de node
-//dist: Carpeta que contiene los js generados de ts, definida en tsconfig
-//tsc -w observa los cambios en el ts y los transforma a js en la carpeta dist
 import Server from "./classes/server";
 import userRoutes from "./routes/userRoutes";
 import mongoose from 'mongoose';
 import bodyParser from 'body-parser';
 import postsRoutes from "./routes/postRoutes";
+import fileUpload from "express-fileupload"
 
 const server = new Server()
-//Body Parse
+//BodyParse
 server.app.use( bodyParser.urlencoded({extended: true}));
 server.app.use( bodyParser.json());
+//Config Upload File
+server.app.use( fileUpload() );
 //Routes of my app
 server.app.use('/user',userRoutes);
 server.app.use('/posts',postsRoutes);
