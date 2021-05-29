@@ -47,7 +47,7 @@ postsRoutes.post('/upload', [verifyToken], async (req: any, res: Response) =>{
     });
 });
 //Get Image
-postsRoutes.get('/image/:userid/:img', [verifyToken], (req:any, res: Response) =>{
+postsRoutes.get('/image/:userid/:img', (req:any, res: Response) =>{
     const userId = req.params.userid;
     const img = req.params.img;
     const pathImage = fileSystem.getImageUrl(userId, img);
