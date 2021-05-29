@@ -1,6 +1,6 @@
 # Backend Fotosgram
 
-Backend para la aplicación de (Ionic FotosGram)[https://github.com/DrakeRedfield/ionic.fotosgram.aaba] hecho con Express.
+Backend para la aplicación de [Ionic FotosGram](https://github.com/DrakeRedfield/ionic.fotosgram.aaba) hecho con Express.
 
 # Installación
 
